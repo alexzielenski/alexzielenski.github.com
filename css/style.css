@@ -1,0 +1,287 @@
+html {
+	background: url('../images/background.png') repeat white;
+	-webkit-background-size: 100px 100px;
+	   -moz-background-size: 100px 100px;
+		 -o-background-size: 100px 100px;
+			background-size: 100px 100px;
+	margin: 0;
+	padding: 0;
+	
+	font-family: "HelveticaNeue", "Helvetica Neue", "Helvetica", Helvetica, Arial, Verdana, "Trebuchet MS", sans-serif;
+}
+
+/* Link Styles */
+a:link { color: rgb(40,138,76); text-decoration: none; font-weight: bold; }
+a:hover {text-decoration: underline;}
+
+/* Content Layout */
+div#wrapper {
+	width: 980px;
+/*	height: 260px;*/
+	margin: 0px auto 0px auto;
+}
+div#header {
+	height: 22px;
+	width: 860px;
+	background: url('../images/header.png') no-repeat;
+	-webkit-background-size: 309px 22px;
+	   -moz-background-size: 309px 22px;
+	     -o-background-size: 309px 22px;
+			background-size: 309px 22px;
+/* 	overflow: hidden; */
+	margin: 64px auto 0px;
+}
+
+div#separator {
+	width: 860px;
+	height: 2px;
+	background: url('../images/separator.png') repeat-x;
+ 	-webkit-background-size: 4px 2px;
+	   -moz-background-size: 4px 2px;
+	     -o-background-size: 4px 2px;
+			background-size: 4px 2px;
+/* 	overflow: hidden; */
+	margin: 8px auto 0px;
+	opacity: 0.6;
+}
+
+/* Slides */
+
+div#slides {
+	margin: 16px auto 0px;
+	width: 860px;
+	height: 279px;
+	position: relative;
+	display: block;
+}
+
+div.slidesContainer {
+	margin: 0px;	
+	
+	width: 860px;
+	height: 279px;
+	
+	position: relative;
+	overflow: hidden;
+	
+	background-color: black;
+	
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+div.slidesContainer div {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	overflow: hidden;
+}
+div.slidesContainer img {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+img { /* don't allow images to be selected */
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+/* Pagination */
+ul.pagination {
+	list-style: none;
+	margin: 10px auto;
+	width: 85px;
+/*	position: relative;*/
+	padding: 0px;
+}
+
+ul.pagination li {
+	float: left;
+	margin: 0 2px;
+	background-image: url('../images/pagination.png');
+	background-position: 0px 0px;
+	-webkit-background-size: 12px 39px;
+	   -moz-background-size: 12px 39px;
+		 -o-background-size: 12px 39px;
+			background-size: 12px 39px;
+	
+	width: 12px;
+	height: 13px;
+	
+	border: 0;
+	padding: 0;
+	outline: 0;
+	font-size: 0pt;
+	text-indent: -99999px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+ul.pagination li:active {
+	background-position: 0px 26px;
+}
+
+ul.pagination li a {
+	display: block;
+	width: 12px;
+	height: 12px;
+	float: left;
+	overflow: hidden;
+}
+
+ul.pagination li.current {
+	background-position: 0px 13px;
+}
+
+/* Arrows */
+div.arrow {
+	height: 72px; 
+	width: 15px;
+	margin-top: -28px; /* acount for extra padding on the bottom for the pagination */
+	top: 50%;
+	position: absolute;
+	cursor: pointer;
+}
+
+div.leftArrow {
+	background-image: url('../images/arrows_left.png');
+	background-position: 0px 0px;
+-webkit-background-size: 15px 216px;
+   -moz-background-size: 15px 216px;
+	 -o-background-size: 15px 216px;
+		background-size: 15px 216px;
+	margin-left: -15px;
+}
+div.rightArrow {
+	background-image: url('../images/arrows.png');
+	background-position: 0px 0px;
+-webkit-background-size: 15px 216px;
+   -moz-background-size: 15px 216px;
+	 -o-background-size: 15px 216px;
+		background-size: 15px 216px;
+	right: -15px;
+}
+div.leftArrow:hover, div.rightArrow:hover { background-position: 0px 144px; }
+div.leftArrow:active, div.rightArrow:active { background-position: 0px 72px; }
+
+/* Overlay */
+div#slides div.productDescription {
+	display: block;
+
+	opacity: 0.0;
+	filter: alpha(opacity = 0);
+
+	width: 860px;
+	height: 279px;
+
+	background-color: rgb(0,0,0);
+	background-color: rgba(0, 0, 0, 0.80);
+	*background-color: rgb(0,0,0); /* ie only */
+	
+/*	z-index: 999999;*/
+	position: absolute;
+	margin-top: -279px;
+	
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+div#slides div.productDescription p {
+	padding: 15px;
+	position: relative;
+	margin: 0px;
+	color: rgb(215,215,215);
+}
+
+div#slides div.productDescription span.title {
+	font-size: 16pt;
+	font-weight: bold;
+	color: white;
+}
+div#slides div.buttonBox {
+/*	float: right;*/
+	bottom: 10px;
+	right: 10px;
+	position: absolute;
+	font-weight: normal;
+}
+div#slides div.greenButton, div.blackButton {
+	width: 199px;
+	height: 40px;
+
+	padding-top: 7pt;
+
+	position: relative;
+	text-align: center;
+	
+	font-size: 13pt;
+	font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-shadow: 0px 1px 0px black;
+	color: white;
+	font-weight: normal;
+}
+div.blackButton a:link { font-weight: normal; }
+div.greenButton a:link { font-weight: normal; }
+
+div#slides a { font-weight: normal; text-decoration: none; color: rgb(86,198,86); }
+div#slides a:hover { text-decoration: none; }
+div#slides div.greenButton { background: url('../images/green_button.png') no-repeat; 
+	-webkit-background-size: 199px 40px;
+	-moz-background-size: 199px 40px;
+	-o-background-size: 199px 40px;
+	background-size: 199px 40px;		
+}
+
+div#slides div.blackButton { 
+	background: url('../images/black_button.png') no-repeat; 
+	-webkit-background-size: 199px 40px;
+	-moz-background-size: 199px 40px;
+	-o-background-size: 199px 40px;
+	background-size: 199px 40px;
+}
+
+
+/* Footer */
+div#footer {
+	margin: 64px auto 0px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	
+	background-color: rgba(235,235,235, 0.5);
+	border: 1px solid rgba(0,0,0,0.05);
+	
+	width: 860px;
+	height: 84px;
+	
+	color: rgb(81,81,81);
+	text-shadow: 0px 1px 0px rgba(255,255,255,0.5);
+}
+
+div#footer img {
+	float: left;
+}
+
+div#footer .footerText {
+	position: relative;
+	top: 15px;
+	left: 10px;
+	padding-right: 15px;
+	padding-bottom: 15px;
+}
+
+div#footer .copyright {
+	position: relative;
+	
+	font-size: 10pt;
+	color: rgb(191,195,201);
+	
+	float: right;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	padding-right: 15px;
+	
+	bottom: -4px;

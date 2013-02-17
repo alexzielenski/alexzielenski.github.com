@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Alex Zielenski – Cocoa Developer</title>
+	<meta name="generator" content="TextMate http://macromates.com/">
+	<meta name="author" content="Alex Zielenski">
+	
+	<script>document.cookie='devicePixelRatio='+((window.devicePixelRatio === undefined) ? 1 : window.devicePixelRatio)+'; path=/'; console.log(window.devicePixelRatio)</script>
+	<script src="js/jquery-1.7.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/easing.min.jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/slides.min.jquery.js" type="text/javascript" charset="utf-8"></script>
+	
+	<link rel="icon" type="image/png" href="images/favicon.png" >
+	<link rel="stylesheet" href="css/style.css" media="screen" type="text/css">
+	<!-- Date: 2011-11-30 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=9" >
+	
+	<script type="text/javascript">
+		$(function(){
+			var slides = $("#slides");
+			slides.slides({
+				container: 'slidesContainer',
+				next: 'rightArrow',
+				prev: 'leftArrow',
+				generatePagination: true,
+				paginationClass: 'pagination',	
+				effect: 'slide',
+				hoverPause: true,
+				play: 6000,
+				slideSpeed: 650,
+				pause: 0,
+				// slideEasing: "easeOutBounce" // well that was fun
+				slideEasing: "easeInOutQuad"
+			});
+			
+			var descriptions = $("div.productDescription");	
+			descriptions.hover(function () {
+				console.log("mousein");
+				descriptions.stop().animate({opacity:1.0}, 500);
+			}, function() { 
+				console.log("mouseout");
+				descriptions.stop().animate({opacity:0.0}, 500);	
+			});
+			
+		});
+	</script>
+	
+</head>
+<body>
+	<noscript><style id="devicePixelRatio" media="only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2)">#devicePixelRatio{background-image:url("retinaimages.php?devicePixelRatio=2")}</style></noscript>
+	<div id="wrapper">
+		<div id="header"></div>
+		<div id="separator"></div>
+		<div id="slides">
+			<div class="arrow leftArrow"></div>
+			<div class="arrow rightArrow"></div>
+			<div class="slidesContainer">
+				<div>
+					<img src="images/products/zeppelin.png" width="860" height="280" alt="Zeppelin">
+					<div class="productDescription">
+						<p><span class="title">Zeppelin</span><br >
+						A kick-ass (and free) carrier logo manager for your iPhone, iPod Touch, or iPad. </p>
+						<div class="buttonBox"><a href="http://macthemes.net/forum/viewtopic.php?t=16811750"><div class="blackButton">Details on MacThemes</div></a><a href="http://modmyi.com/info/zeppelin.d.php"><div class="greenButton">Available on Cydia</div></a></div>
+					</div>
+				</div>
+				<div>
+					<img src="images/products/codeup.png" width="860" height="279" alt="CodeUp">
+					<div class="productDescription">
+						<p><span class="title">CodeUp</span><br >
+						A non-obtrusive application that uploads your text or code in a flash using your favorite online services, Gist, Pastie, or Pastebin from your menubar! You can use it to share code, text, chat conversations and ask friends for help very easily! Designed by <a href="http://adriankenny.com">Adrian Kenny</a>. 10.6+</p>
+						<div class="buttonBox"><a href="h&#116;&#116;p&#58;&#47;&#47;itun&#101;&#115;.a&#112;&#112;le&#46;&#99;om&#47;&#117;s&#47;a&#112;&#112;&#47;&#99;&#111;d&#101;&#117;&#112;&#47;&#105;d4&#50;3&#50;26&#52;5&#53;&#63;&#109;t&#61;&#49;2&#38;ls=1"><div class="greenButton">$.99 on App Store</div></a></div>
+					</div>
+				</div>
+				<div>
+					<img src="images/products/equili.png" width="860" height="280" alt="Equili">
+					<div class="productDescription">
+						<p><span class="title">Equili</span><br >
+						An awesome project I've had the pleasure of working on with <a href="http://pixeleaf.me">Martin Sorensen</a>, <a href="http://https://twitter.com/#!/baldoph">Baldoph Pourprix</a>, and <a href="https://twitter.com/#!/_rsully">Ryan Sullivan</a>. Stay tuned. 10.7+</p>
+						<div class="buttonBox"><a href="http://www.equili.net"><div class="greenButton">Coming Soon</div></a></div>
+					</div>
+				</div>
+				<div>
+					<img src="images/products/ravissant.png" width="860" height="280" alt="Ravissant" >
+					<div class="productDescription">
+						<p><span class="title">Ravissant</span><br >
+						Ravissant is Mac app that customizes Mac OS X. It works on 10.5 and 10.6 and was designed by the brilliant designer, <a href="http://jake-moore.com/">Jake Moore</a>. It is intuitively designed to make a customized Mac OS X login screen easy with a drag and drop interface.</p>
+						<div class="buttonBox"><a href="http://www.macupdate.com/app/mac/32240/ravissant"><div class="greenButton">Download</div></a></div>
+					</div>
+				</div>
+				<div>
+					<img src="images/products/opensource.png" width="860" height="280" alt="Open source code">
+					<div class="productDescription">
+						<p><span class="title">Open Source</span><br >
+						Awesome open source code for you and your friends to use in your projects.</p>
+						<div class="buttonBox"><a href="http://www.github.com/alexzielenski"><div class="greenButton">GitHub</div></a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<ul class='pagination'>
+			
+		</ul>
+		
+		<div id="footer">
+			<img src="images/photo.png" width="127" height="84" >
+			<div class="footerText">I am <strong>Alex Zielenski</strong>, a 17 year-old independent Mac & iOS developer. I admire good design and 
+			spending free time on something productive. If you have any questions, <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#97;&#108;&#101;&#120;&#122;&#105;&#101;&#108;&#101;&#110;&#115;&#107;&#105;&#46;&#99;&#111;&#109;">contact me.</a>
+			</div>
+			<div class="copyright">
+				© 2013 Alex Zielenski. All Rights Reserved.
+			</div>
+		</div>
+	</div>
+</body>
+</html>
